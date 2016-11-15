@@ -1,0 +1,55 @@
+package xdf;
+
+import java.awt.Container;
+import java.awt.Font;
+import java.awt.Frame;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JDialog;
+import javax.swing.JFrame;
+
+public class FontChooser extends JDialog{
+     public  FontChooser2(Frame f) {
+      
+        protected void previewFont() {
+
+         }
+
+        public String getSelectedName() {
+        return resultName;
+        
+        }
+      
+         public int getSelectedSize() {
+        return resultSize;
+        }
+         
+         public Font getSelectedFont() {
+         return resultFont;
+         }
+        
+         public static void main(String[] args) {
+           JFrame f = new JFrame("FontChooser Startup");
+           FontChooser2 fc = new FontChooser(f);
+           Container cp = f.getContentPane();
+           cp.setLayout(new GridLayout( , ));
+
+           JButton theButton = new JButton("Change font");
+           cp.add(theButton);
+             theButton.addActionListener(new ActionListener() {
+              public void actionPerformed1(ActionEvent e) {
+                 fc.setVisible(true);   
+                 Font myNewFont = fc.getSelectedFont();           
+                 System.out.println("You chose " + myNewFont);
+                 
+           }
+
+			@Override
+			public void actionPerformed(ActionEvent arg0) {
+				// TODO Auto-generated method stub
+				
+			}
+           }
+}
