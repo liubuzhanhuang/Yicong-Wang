@@ -1,0 +1,21 @@
+ public String[] getCharFont() {
+  
+  String[] font = {"plain", "bold", "italic", "else"};
+  return font;
+ }
+ 
+ public int getCharFont(String str) {
+  
+  if(str.equals("plain")) {
+   return Font.PLAIN;
+  }
+  else if(str.equals("bold")) {
+   return Font.BOLD;
+  }
+  else if(str.equals("italic")){
+   return Font.ITALIC;
+  }
+  else {
+   return Font.ITALIC + Font.BOLD;
+  }
+ }
