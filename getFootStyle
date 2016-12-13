@@ -1,0 +1,10 @@
+public String[] getFontStyle() {
+  
+  Font[] systemFont = GraphicsEnvironment.getLocalGraphicsEnvironment().getAllFonts();
+  String[] systemFontString = new String[systemFont.length];
+  for(int i=0; i<systemFontString.length; i++) {
+   systemFontString[i] = systemFont[i].getName();
+  }
+  
+  return systemFontString;
+ }
