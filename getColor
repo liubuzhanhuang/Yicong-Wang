@@ -1,0 +1,24 @@
+public String[] getColor() {
+  
+  String[] color = {"black", "red", "blue", "yellow", "green", "user-defined"};
+  return color;
+ }
+ 
+ public Color getColor(String str) {
+  
+  if(str.equals("black")) {
+   return Color.BLACK;
+  }
+  else if(str.equals("red")) {
+   return Color.RED;
+  }
+  else if(str.equals("blue")) {
+   return Color.BLUE;
+  }
+  else if(str.equals("yellow")) {
+   return Color.YELLOW;
+  }
+  else {
+   return Color.GREEN;
+  }
+ }
